@@ -1,4 +1,6 @@
 import QtQuick
+import QtQuick.Layouts
+
 import Quickshell
 import Quickshell.Wayland
 
@@ -33,6 +35,28 @@ Variants {
         radius: Cfg.Bar.data.barRadius
         anchors.fill: parent
         color: Cfg.Bar.data.barColor
+      }
+
+      Top {
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: middleContainer.top
+        anchors.margins: 4
+      }
+      Center {
+        id: middleContainer
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.margins: 4
+      }
+      Bottom {
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: middleContainer.bottom
+        anchors.margins: 4
       }
     }
   }
