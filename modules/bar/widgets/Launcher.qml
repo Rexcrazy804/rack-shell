@@ -27,8 +27,7 @@ Child {
     anchors.fill: parent
     hoverEnabled: true
     cursorShape: Qt.PointingHandCursor
-    // FIXME
-    // do something on launch
+    // FIXME do something on launch
     onPressed: console.log("I've been touched :>")
   }
 }
