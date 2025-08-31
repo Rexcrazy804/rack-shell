@@ -26,8 +26,11 @@ Singleton {
       id: adapter
       property int barWidth: 50
       property int barRadius: 10
-      property string barColor: Cfg.Colors.data.base
       property int barMargin: 4
+      property string barColor: Cfg.Colors.data.base
+
+      property int workspaceCount: 7
+
       property int childrenSpacing: 8
       property int childrenRadius: 8
       property string childrenColor: Cfg.Colors.data.surface0
