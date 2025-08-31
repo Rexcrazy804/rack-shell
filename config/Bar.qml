@@ -28,6 +28,7 @@ Singleton {
       property int barRadius: 10
       property string barColor: Cfg.Colors.data.base
       property int barMargin: 4
+      property int childrenSpacing: 8
     }
   }
 }
