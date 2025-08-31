@@ -5,7 +5,7 @@ import Quickshell.Hyprland
 import qs.config as Cfg
 
 Repeater {
-  model: 7
+  model: Cfg.Bar.data.workspaceCount
   delegate: Rectangle {
     required property int modelData
     property bool active: (Hyprland.focusedWorkspace?.id - 1 ?? 0) == modelData
