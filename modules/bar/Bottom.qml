@@ -1,6 +1,8 @@
 import QtQuick
 import QtQuick.Layouts
+
 import qs.config as Cfg
+import qs.modules.bar.widgets as Wid
 
 Item {
   ColumnLayout {
@@ -10,17 +12,6 @@ Item {
     anchors.right: parent.right
     spacing: Cfg.Bar.data.childrenSpacing
 
-    Rectangle {
-      Layout.fillWidth: true
-      implicitHeight: this.width
-    }
-    Rectangle {
-      Layout.fillWidth: true
-      implicitHeight: this.width
-    }
-    Rectangle {
-      Layout.fillWidth: true
-      implicitHeight: this.width
-    }
+    Wid.Session {}
   }
 }
