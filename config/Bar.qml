@@ -10,7 +10,7 @@ Singleton {
 
   // maybe this should be a generic?
   FileView {
-    path: Dat.Paths.config + "/bar.json"
+    path: Dat.Paths.config + "/general.json"
     watchChanges: true
     onAdapterUpdated: writeAdapter()
     onFileChanged: reload()
@@ -24,17 +24,21 @@ Singleton {
     // FIXME adjust these defaults I fucking eyeballed it alright?
     JsonAdapter {
       id: adapter
-      property int barWidth: 50
-      property int barRadius: 10
-      property int barMargin: 4
-      property string barColor: Cfg.Colors.data.base
+      property JsonObject bar: JsonObject {
+        property int width: 50
+        property int radius: 10
+        property int margin: 4
+        property string color: Cfg.Colors.data.base
 
-      property int workspaceCount: 7
+        property int workspaceCount: 7
+      }
 
-      property int childrenMargin: 5
-      property int childrenSpacing: 8
-      property int childrenRadius: 10
-      property string childrenColor: Cfg.Colors.data.surface0
+      property JsonObject child: JsonObject {
+        property int margin: 5
+        property int spacing: 8
+        property int radius: 10
+        property string color: Cfg.Colors.data.surface0
+      }
     }
   }
 }
