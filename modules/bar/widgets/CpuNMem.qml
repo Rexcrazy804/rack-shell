@@ -7,20 +7,25 @@ import qs.data as Dat
 
 Child {
   Layout.fillWidth: true
-  implicitHeight: this.width * 2.4
+  implicitHeight: col.implicitHeight + 8
+
+  component StyledProgress: Cmp.CircularProgress {
+    rotation: -180
+    size: 28
+    primaryColor: Cfg.Colors.data.lavender
+    secondaryColor: Cfg.Colors.data.mantle
+  }
 
   ColumnLayout {
-    spacing: 2
-    anchors.fill: parent
-    anchors.topMargin: 4
-    anchors.bottomMargin: 4
-    Cmp.CircularProgress {
-      rotation: -180
+    id: col
+    spacing: 5
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.verticalCenter: parent.verticalCenter
+
+    StyledProgress {
       Layout.alignment: Qt.AlignCenter
-      size: 28
       value: Dat.Resources.cpuUsage
-      primaryColor: Cfg.Colors.data.lavender
-      secondaryColor: Cfg.Colors.data.mantle
     }
     Item {
       Layout.fillWidth: true
@@ -32,14 +37,11 @@ Child {
         font.pointSize: 11
       }
     }
-    Cmp.CircularProgress {
+    StyledProgress {
       Layout.topMargin: 2
-      rotation: -180
       Layout.alignment: Qt.AlignCenter
-      size: 28
       value: Dat.Resources.memUsage
       primaryColor: Cfg.Colors.data.blue
-      secondaryColor: Cfg.Colors.data.mantle
     }
   }
 }
