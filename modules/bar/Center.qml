@@ -10,7 +10,7 @@ Item {
   ColumnLayout {
     id: col
     anchors.fill: parent
-    spacing: Cfg.Bar.data.childrenSpacing
+    spacing: Cfg.General.child.spacing
 
     Wid.Workspaces {}
   }
