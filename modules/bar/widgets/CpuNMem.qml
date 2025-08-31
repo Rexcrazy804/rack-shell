@@ -30,7 +30,7 @@ Child {
 
   ColumnLayout {
     id: col
-    spacing: 5
+    spacing: Cfg.General.widgets.cpuNmem.spacing
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.verticalCenter: parent.verticalCenter
@@ -39,9 +39,12 @@ Child {
       Layout.alignment: Qt.AlignCenter
       value: Dat.Resources.cpuUsage
     }
+
     Label {
+      visible: Cfg.General.widgets.cpuNmem.showCpuLabel
       usage: Dat.Resources.cpuUsage
     }
+
     StyledProgress {
       Layout.topMargin: 2
       Layout.alignment: Qt.AlignCenter
@@ -50,6 +53,7 @@ Child {
     }
 
     Label {
+      visible: Cfg.General.widgets.cpuNmem.showMemLabel
       usage: Dat.Resources.memUsage
     }
   }
