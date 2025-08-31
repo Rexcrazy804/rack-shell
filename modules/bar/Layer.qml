@@ -17,20 +17,22 @@ Variants {
     }
 
     color: "transparent"
-    // FIXME I eyeballed the width (ts gives me cancer / I couldn't find the width)
-    implicitWidth: 60
+    implicitWidth: Cfg.Bar.data.barWidth
 
     WlrLayershell.namespace: `${Dat.Paths.shellName}.bar.quickshell`
     WlrLayershell.exclusionMode: ExclusionMode.Auto
     WlrLayershell.layer: WlrLayer.Top
 
     Item {
-      anchors.margins: 8
+      anchors.margins: Cfg.Bar.data.barMargin
+      // FIXME uncomment the bellow line, it looks ugly with my hyprconfig
+      // anchors.rightMargin: 0
       anchors.fill: parent
       Rectangle {
-        radius: 13
+        id: base
+        radius: Cfg.Bar.data.barRadius
         anchors.fill: parent
-        color: Cfg.Colors.data.base
+        color: Cfg.Bar.data.barColor
       }
     }
   }
