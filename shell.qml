@@ -1,11 +1,9 @@
+pragma ComponentBehavior: Bound
+
+import QtQuick
 import Quickshell
+import qs.modules.bar as Bar
 
 ShellRoot {
-  Variants {
-    model: Quickshell.screens
-
-    Scope {
-      required property ShellScreen modelData
-    }
-  }
+  Bar.Layer {}
 }
