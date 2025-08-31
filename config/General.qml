@@ -52,6 +52,12 @@ Singleton {
           property bool showCpuLabel: true
           property bool showMemLabel: false
         }
+
+        property JsonObject weather: JsonObject {
+          property real longitude: 127.8014
+          property real latitude: 26.3358
+          property int interval_m: 10
+        }
       }
     }
   }
