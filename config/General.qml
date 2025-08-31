@@ -9,6 +9,7 @@ Singleton {
   property alias data: adapter
   property alias bar: bar
   property alias child: child
+  property alias widgets: widgets
 
   // maybe this should be a generic?
   FileView {
@@ -42,6 +43,15 @@ Singleton {
         property int spacing: 8
         property int radius: 10
         property string color: Cfg.Colors.data.surface0
+      }
+
+      property JsonObject widgets: JsonObject {
+        id: widgets
+        property JsonObject cpuNmem: JsonObject {
+          property int spacing: 5
+          property bool showCpuLabel: true
+          property bool showMemLabel: false
+        }
       }
     }
   }
