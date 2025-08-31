@@ -7,6 +7,7 @@ Item {
 
   ColumnLayout {
     id: col
+    visible: false
     anchors.fill: parent
     spacing: Cfg.Bar.data.childrenSpacing
 
