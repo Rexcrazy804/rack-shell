@@ -12,6 +12,7 @@ Item {
     spacing: Cfg.Bar.data.childrenSpacing
 
     Wid.Launcher {}
+    Wid.CpuNMem {}
     Wid.Weather {}
   }
 }
