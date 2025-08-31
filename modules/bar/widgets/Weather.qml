@@ -3,6 +3,7 @@ import QtQuick.Layouts
 
 import qs.components as Cmp
 import qs.config as Cfg
+import qs.data as Dat
 
 Child {
   Layout.fillWidth: true
@@ -25,7 +26,7 @@ Child {
       anchors.left: parent.left
       anchors.bottom: parent.bottom
       color: Cfg.Colors.data.text
-      text: "50°"
+      text: Dat.Weather.temperature.toFixed(0) +  "°"
       font.pointSize: 12
     }
   }
