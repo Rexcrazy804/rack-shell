@@ -8,12 +8,26 @@ Child {
   Layout.fillWidth: true
   implicitHeight: this.width * 1.1
 
+  Rectangle {
+    opacity: (mArea.containsMouse) ? (mArea.containsPress) ? 0.08 : 0.1 : 0
+    anchors.fill: parent
+    radius: parent.radius
+    color: icon.color
+  }
+
   Cmp.StyledText {
+    id: icon
     color: Cfg.Colors.data.red
     anchors.centerIn: parent
     text: "󰐥"
   }
 
-  // FIXME
-  // do something on launch
+  MouseArea {
+    id: mArea
+    anchors.fill: parent
+    hoverEnabled: true
+    cursorShape: Qt.PointingHandCursor
+    // FIXME do something on click
+    onPressed: console.log("I've been touched :>")
+  }
 }
