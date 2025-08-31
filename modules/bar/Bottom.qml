@@ -12,6 +12,7 @@ Item {
     anchors.right: parent.right
     spacing: Cfg.Bar.data.childrenSpacing
 
+    Wid.Time {}
     Wid.Session {}
   }
 }
