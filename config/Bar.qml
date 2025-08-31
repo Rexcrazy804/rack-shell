@@ -31,6 +31,7 @@ Singleton {
 
       property int workspaceCount: 7
 
+      property int childrenMargin: 5
       property int childrenSpacing: 8
       property int childrenRadius: 8
       property string childrenColor: Cfg.Colors.data.surface0
