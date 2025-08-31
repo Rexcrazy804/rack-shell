@@ -20,5 +20,11 @@ Repeater {
         duration: 100
       }
     }
+
+    MouseArea {
+      anchors.fill: parent
+      onClicked: Hyprland.dispatch("workspace " + (parent.modelData + 1))
+      cursorShape: Qt.PointingHandCursor
+    }
   }
 }
