@@ -1,3 +1,4 @@
+pragma ComponentBehavior: Bound
 pragma Singleton
 import Quickshell
 import Quickshell.Io
@@ -12,6 +13,13 @@ Singleton {
     watchChanges: true
     onAdapterUpdated: writeAdapter()
     onFileChanged: reload()
+
+    // writes the defualt values if file not found
+    onLoadFailed: err => {
+      if (err == FileViewError.FileNotFound) {
+        writeAdapter();
+      }
+    }
 
     // These are the defaults (based on catppuccin mocha).
     // You can modify colors.json at  $XDG_CONFIG_HOME/${shellName}/colors.json
