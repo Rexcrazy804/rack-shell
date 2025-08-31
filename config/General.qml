@@ -7,6 +7,8 @@ import qs.config as Cfg
 
 Singleton {
   property alias data: adapter
+  property alias bar: bar
+  property alias child: child
 
   // maybe this should be a generic?
   FileView {
@@ -25,6 +27,7 @@ Singleton {
     JsonAdapter {
       id: adapter
       property JsonObject bar: JsonObject {
+        id: bar
         property int width: 50
         property int radius: 10
         property int margin: 4
@@ -34,6 +37,7 @@ Singleton {
       }
 
       property JsonObject child: JsonObject {
+        id: child
         property int margin: 5
         property int spacing: 8
         property int radius: 10
