@@ -13,4 +13,7 @@ Child {
     anchors.centerIn: parent
     text: "󰐥"
   }
+
+  // FIXME
+  // do something on launch
 }

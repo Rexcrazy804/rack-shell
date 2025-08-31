@@ -4,8 +4,8 @@ import qs.config as Cfg
 
 Item {
   ColumnLayout {
-    visible: false
     id: col
+    visible: false
     anchors.top: parent.top
     anchors.left: parent.left
     anchors.right: parent.right
