@@ -9,7 +9,7 @@ Item {
     anchors.top: parent.top
     anchors.left: parent.left
     anchors.right: parent.right
-    spacing: Cfg.Bar.data.childrenSpacing
+    spacing: Cfg.General.child.spacing
 
     Wid.Launcher {}
     Wid.CpuNMem {}
