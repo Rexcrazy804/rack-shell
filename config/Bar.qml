@@ -24,10 +24,10 @@ Singleton {
     // FIXME adjust these defaults I fucking eyeballed it alright?
     JsonAdapter {
       id: adapter
-      property int barWidth: 60
-      property int barRadius: 15
+      property int barWidth: 50
+      property int barRadius: 10
       property string barColor: Cfg.Colors.data.base
-      property int barMargin: 8
+      property int barMargin: 4
     }
   }
 }
