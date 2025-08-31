@@ -6,7 +6,6 @@ import qs.modules.bar.widgets as Wid
 
 Item {
   ColumnLayout {
-    id: colBot
     anchors.bottom: parent.bottom
     anchors.left: parent.left
     anchors.right: parent.right
