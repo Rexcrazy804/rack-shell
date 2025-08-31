@@ -42,21 +42,21 @@ Variants {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: middleContainer.top
-        anchors.margins: 4
+        anchors.margins: Cfg.Bar.data.childrenMargin
       }
       Center {
         id: middleContainer
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.verticalCenter: parent.verticalCenter
-        anchors.margins: 4
+        anchors.margins: Cfg.Bar.data.childrenMargin
       }
       Bottom {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: middleContainer.bottom
-        anchors.margins: 4
+        anchors.margins: Cfg.Bar.data.childrenMargin
       }
     }
   }
