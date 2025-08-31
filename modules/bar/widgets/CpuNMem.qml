@@ -20,6 +20,7 @@ Child {
       size: 28
       value: Dat.Resources.cpuUsage
       primaryColor: Cfg.Colors.data.lavender
+      secondaryColor: Cfg.Colors.data.mantle
     }
     Item {
       Layout.fillWidth: true
@@ -38,6 +39,7 @@ Child {
       size: 28
       value: Dat.Resources.memUsage
       primaryColor: Cfg.Colors.data.blue
+      secondaryColor: Cfg.Colors.data.mantle
     }
   }
 }
