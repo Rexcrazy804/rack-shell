@@ -6,4 +6,5 @@ Text {
   font.family: "Iosevka"
   font.hintingPreference: Font.PreferFullHinting
   renderType: Text.NativeRendering
+  font.pointSize: 14
 }
