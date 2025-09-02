@@ -1,10 +1,13 @@
 import QtQuick
 import QtQuick.Layouts
+import Quickshell
 
 import qs.components as Cmp
 import qs.config as Cfg
 
 Child {
+  id: root
+  readonly property var cfg: Cfg.General.widgets.launcher
   Layout.fillWidth: true
   implicitHeight: this.width * 1.1
 
@@ -27,7 +30,6 @@ Child {
     anchors.fill: parent
     hoverEnabled: true
     cursorShape: Qt.PointingHandCursor
-    // FIXME do something on launch
-    onPressed: console.log("I've been touched :>")
+    onPressed: Quickshell.execDetached([root.cfg.launcher].concat(root.cfg.args))
   }
 }
