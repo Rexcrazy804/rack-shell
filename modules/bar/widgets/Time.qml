@@ -20,7 +20,9 @@ Child {
   }
 
   TimeText {
-    time: Qt.formatDateTime(Dat.SysClock.date, "hh")
+    readonly property int hour: parseInt(Qt.formatDateTime(Dat.SysClock.date, "hh"))
+    readonly property bool use24h: Cfg.General.widgets.time.use24hfmt
+    time: (use24h) ? hour : (hour === 12 || hour === 24) ? 12 : hour % 12
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.bottom: center.top
