@@ -8,12 +8,18 @@ import qs.config as Cfg
 
 Singleton {
   id: root
-  property real temperature
   property var jsonData
   property var cfg: Cfg.General.widgets.weather
 
   readonly property real lat: cfg.latitude
   readonly property real lon: cfg.longitude
+  property alias temperature: persist.temperature
+
+  PersistentProperties {
+    id: persist
+    property int temperature
+    reloadableId: "weatherInfo"
+  }
 
   Process {
     id: getProc
