@@ -58,6 +58,9 @@ Singleton {
           property real latitude: 26.3358
           property int interval_m: 10
         }
+        property JsonObject time: JsonObject {
+          property bool use24hfmt: true
+        }
       }
     }
   }
