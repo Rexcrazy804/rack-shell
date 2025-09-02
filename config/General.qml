@@ -58,8 +58,15 @@ Singleton {
           property real latitude: 26.3358
           property int interval_m: 10
         }
+
         property JsonObject time: JsonObject {
           property bool use24hfmt: true
+        }
+
+        property JsonObject launcher: JsonObject {
+          // applicaiton to launch when launcher widget is clicked
+          property string launcher: ""
+          property list<string> args: []
         }
       }
     }
